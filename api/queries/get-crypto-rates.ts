@@ -17,7 +17,9 @@ export const getCryptoRates = async () =>  {
 
     } catch (error) {
         console.error("Failed to fetch exchange rates:", error)
-        throw new Error("Failed to fetch exchange rates. Please try again later.")
+        return {
+            error: "Failed to fetch exchange rates. Please try again later."
+        }
     }
 }
 

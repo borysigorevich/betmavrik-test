@@ -13,7 +13,7 @@
     "details": "View details"
   },
   "Error": {
-    "title": "Error Occurred",
+    "title": "Something went wrong",
     "description": "We couldn't load the exchange rates data",
     "message": "There was a problem fetching the latest cryptocurrency exchange rates. This could be due to network issues or the API being temporarily unavailable.",
     "tryAgain": "Try Again"

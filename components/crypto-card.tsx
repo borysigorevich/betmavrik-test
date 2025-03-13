@@ -1,6 +1,8 @@
 import { CryptoSymbol } from '@/components/crypto-symbol';
 import { Card, CardContent } from '@/components/ui/card';
+import {TLocales} from "@/i18n/routing";
 import { formatCurrency } from '@/lib/utils';
+import {getLocale} from "next-intl/server";
 
 interface ICryptoCardProps {
   currency: string;
@@ -8,6 +10,8 @@ interface ICryptoCardProps {
 }
 
 export const CryptoCard = async ({ currency, rate }: ICryptoCardProps) => {
+  const locale = await getLocale();
+
   return (
     <Card className="border-secondary hover:shadow-secondary rounded-none bg-black transition-all hover:-translate-x-1 hover:-translate-y-1">
       <CardContent className="p-6">
@@ -25,7 +29,10 @@ export const CryptoCard = async ({ currency, rate }: ICryptoCardProps) => {
         <div className="flex items-end justify-between">
           <div>
             <p className="text-primary text-2xl font-bold">
-              {formatCurrency(Number.parseFloat(rate), 'EUR')}
+              {formatCurrency({
+                locale: locale as TLocales,
+                value: Number.parseFloat(rate),
+              })}
             </p>
           </div>
         </div>

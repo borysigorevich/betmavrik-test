@@ -1,8 +1,17 @@
 import {apiFetch} from "@/api/fetch";
 
+interface ICryptoRates {
+    data: {
+        currency: string
+        rates: {
+            [index: PropertyKey]: string
+        }
+    }
+}
+
 export const getCryptoRates = async () =>  {
     try {
-        return await  apiFetch("https://api.coinbase.com/v2/exchange-rates?currency=EUR", {
+        return await  apiFetch<ICryptoRates>("https://api.coinbase.com/v2/exchange-rates?currency=EUR", {
             next: { revalidate: 60 },
         })
 

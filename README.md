@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# 🚀 Betmawrik Test - Next.js Application
+
+This is a **Dockerized** Next.js application that can be built and run using Docker.
+
+---
+
+## 📦 Prerequisites
+
+Before running the application, ensure you have:
+- [Docker](https://www.docker.com/get-started) installed.
+- A valid `Dockerfile` in the project root.
+
+---
+
+## 🛠 Build and Run the Docker Container
+
+### **1️⃣ Build the Docker Image**
+Navigate to the project root and run:
+
+```sh
+docker build -t betmawrik-test .

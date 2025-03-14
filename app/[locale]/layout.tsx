@@ -7,6 +7,8 @@ import './globals.css';
 
 const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 
+const rtlLocales = ['he'];
+
 export default async function LocaleLayout({
   children,
   params,
@@ -19,7 +21,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const dir = locale === 'he' ? 'rtl' : 'ltr';
+  const dir = rtlLocales.includes(locale) ? 'rtl' : 'ltr';
 
   return (
     <html

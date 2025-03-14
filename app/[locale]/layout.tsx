@@ -1,10 +1,11 @@
+import { Header } from '@/components/header';
 import { routing } from '@/i18n/routing';
-import {Space_Mono} from 'next/font/google'
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { Space_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import './globals.css'
+import './globals.css';
 
-const spaceMono = Space_Mono({subsets: ['latin'], weight: ['400', '700']})
+const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default async function LocaleLayout({
   children,
@@ -18,12 +19,26 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const dir = locale === "he" ? "rtl" : "ltr"
+  const dir = locale === 'he' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning className={spaceMono.className}>
+    <html
+      lang={locale}
+      dir={dir}
+      suppressHydrationWarning
+      className={spaceMono.className}
+    >
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <div
+            className={
+              'mx-auto grid min-h-screen max-w-7xl grid-rows-[auto_1fr] p-4 md:p-8 lg:p-12'
+            }
+          >
+            <Header />
+            {children}
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

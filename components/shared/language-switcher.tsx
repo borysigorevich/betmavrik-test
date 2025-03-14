@@ -23,7 +23,7 @@ export default function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="border-primary !shadow-primary text-primary hover:text-primary gap-2 rounded-none border bg-transparent hover:bg-transparent ml-auto md:ml-0"
+          className="border-primary !shadow-primary text-primary hover:text-primary ml-auto gap-2 rounded-none border bg-transparent hover:bg-transparent md:ml-0"
         >
           <span>
             {languages.find((lang) => lang.code === currentLocale)?.name || 'Language'}

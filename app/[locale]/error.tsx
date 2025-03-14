@@ -26,8 +26,8 @@ const Error = ({
 
   return (
     <div className="grid h-full place-items-center bg-black">
-      <div className={'flex flex-col gap-3 text-center items-center'}>
-        <div className="text-primary flex items-center gap-2 justify-center">
+      <div className={'flex flex-col items-center gap-3 text-center'}>
+        <div className="text-primary flex items-center justify-center gap-2">
           <AlertCircle className="h-5 w-5" />
           <h2>{t('title')}</h2>
         </div>
@@ -36,7 +36,7 @@ const Error = ({
 
         <Button
           onClick={refreshAndReset}
-          className="!shadow-primary w-fit border-primary text-primary gap-2 rounded-none border bg-black hover:-translate-x-px hover:-translate-y-px hover:bg-black"
+          className="!shadow-primary border-primary text-primary w-fit gap-2 rounded-none border bg-black hover:-translate-x-px hover:-translate-y-px hover:bg-black"
         >
           {t('tryAgain')}
         </Button>

@@ -1,8 +1,8 @@
 import { CryptoSymbol } from '@/features/exchange-rates/components/crypto-symbol';
 import { Card, CardContent } from '@/components/ui/card';
-import {TLocales} from "@/i18n/routing";
+import { TLocales } from '@/i18n/routing';
 import { formatCurrency } from '@/lib/utils';
-import {getLocale} from "next-intl/server";
+import { getLocale } from 'next-intl/server';
 
 interface ICryptoCardProps {
   currency: string;

@@ -32,12 +32,12 @@ export const CryptoSymbol = ({ symbol }: { symbol: string }) => {
           onLoad={() => {
             setTimeout(() => {
               setLoaded(true);
-            }, 10)
+            }, 10);
           }}
           width={40}
           height={40}
           className={cn('border-primary shadow-primary h-10 w-10 rounded-full border', {
-            'invisible': !loaded,
+            invisible: !loaded,
           })}
         />
       )}

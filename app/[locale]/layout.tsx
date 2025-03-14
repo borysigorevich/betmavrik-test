@@ -1,4 +1,4 @@
-import { Header } from '@/components/header';
+import { Header } from '@/components/shared/header';
 import { routing } from '@/i18n/routing';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { Space_Mono } from 'next/font/google';

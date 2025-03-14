@@ -1,4 +1,4 @@
-import LanguageSwitcher from '@/components/language-switcher';
+import LanguageSwitcher from '@/components/shared/language-switcher';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 

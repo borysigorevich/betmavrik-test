@@ -1,4 +1,4 @@
-import { ExchangeRates } from '@/components/exchange-rates';
+import { ExchangeRates } from '@/app/[locale]/_components/exchange-rates';
 
 const Home = async () => {
   return (

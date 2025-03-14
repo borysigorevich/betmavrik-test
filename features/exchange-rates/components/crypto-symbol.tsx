@@ -14,12 +14,6 @@ export const CryptoSymbol = ({ symbol }: { symbol: string }) => {
     setLoaded(false);
   }, [symbol]);
 
-  console.log({
-    iconUrl,
-    error,
-    loaded,
-  });
-
   return (
     <div className="relative h-10 w-10">
       {!loaded && !error && (
@@ -36,11 +30,14 @@ export const CryptoSymbol = ({ symbol }: { symbol: string }) => {
           alt={`${symbol} icon`}
           onError={() => setError(true)}
           onLoad={() => {
-            setLoaded(true);
+            setTimeout(() => {
+              setLoaded(true);
+            }, 10)
           }}
           width={40}
           height={40}
           className={cn('border-primary shadow-primary h-10 w-10 rounded-full border', {
+            'invisible': !loaded,
           })}
         />
       )}

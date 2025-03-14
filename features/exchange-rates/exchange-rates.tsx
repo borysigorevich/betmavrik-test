@@ -7,6 +7,8 @@ export const ExchangeRates = async () => {
 
   const rates = data?.data.rates || {};
 
+  // TODO: add search functionality, pagination
+
   return (
     <ErrorInterceptor error={error}>
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

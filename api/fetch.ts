@@ -17,7 +17,7 @@ export const apiFetch: ApiFetchFn = async (inputUrl, options?) => {
 
     if (options?.searchParams) {
         Object.entries(options.searchParams).forEach(([key, value]) => {
-            value && url.searchParams.append(key, value);
+            if(value) url.searchParams.append(key, value);
         });
     }
 

@@ -1,5 +1,5 @@
-import { getCryptoRates } from '@/api/queries/get-crypto-rates';
-import { CryptoCard } from '@/app/[locale]/_components/crypto-card';
+import { getCryptoRates } from '@/features/exchange-rates/api/get-crypto-rates';
+import { CryptoCard } from '@/features/exchange-rates/components/crypto-card';
 import { ErrorInterceptor } from '@/components/shared/error-interceptor';
 
 export const ExchangeRates = async () => {

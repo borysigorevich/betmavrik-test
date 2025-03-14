@@ -1,4 +1,4 @@
-import { CryptoSymbol } from '@/app/[locale]/_components/crypto-symbol';
+import { CryptoSymbol } from '@/features/exchange-rates/components/crypto-symbol';
 import { Card, CardContent } from '@/components/ui/card';
 import {TLocales} from "@/i18n/routing";
 import { formatCurrency } from '@/lib/utils';

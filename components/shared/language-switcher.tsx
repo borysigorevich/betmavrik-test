@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useLocale } from 'next-intl';
 
@@ -17,6 +17,7 @@ const languages = [
 
 export default function LanguageSwitcher() {
   const currentLocale = useLocale();
+  const pathname = usePathname();
 
   return (
     <DropdownMenu>
@@ -42,7 +43,7 @@ export default function LanguageSwitcher() {
               'bg-primary text-black': language.code === currentLocale,
             })}
           >
-            <Link href={'/'} locale={language.code}>
+            <Link href={pathname} locale={language.code}>
               {language.name}
             </Link>
           </DropdownMenuItem>
